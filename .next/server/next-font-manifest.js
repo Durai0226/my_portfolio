@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/dsp/Documents/my_portfolio/app/layout\":[\"static/media/d90e10e85a15eaad-s.p.woff2\",\"static/media/edb9f1eb1c1a7ead-s.p.woff2\",\"static/media/ce9b84dce7581e2b-s.p.woff2\",\"static/media/dcc209c0b1ab30af-s.p.woff2\",\"static/media/01af0fc7b4278e65-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
