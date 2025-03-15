@@ -1,0 +1,287 @@
+.section-service-2 {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0;
+}
+
+/* Section Header Styles */
+.badge-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.custom-badge {
+  background: rgba(168, 255, 83, 0.1);
+  color: #a8ff53;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #a8ff53;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #ffffff 0%, #a8ff53 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Service Card Styles */
+.service-card {
+  background: #272730;
+  border: 1px solid #3b413d;
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2rem;
+  height: 100%;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.service-card:hover {
+  transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+  border-color: rgba(168, 255, 83, 0.3);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.2),
+    0 0 20px rgba(168, 255, 83, 0.1);
+}
+
+/* Icon Styles */
+.icon-container {
+  width: 60px;
+  height: 60px;
+  background: rgba(168, 255, 83, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover .icon-container {
+  transform: translateZ(20px) scale(1.1);
+  background: rgba(168, 255, 83, 0.2);
+  box-shadow: 
+    0 0 20px rgba(168, 255, 83, 0.3),
+    0 0 40px rgba(168, 255, 83, 0.1);
+}
+
+.service-icon {
+  color: #a8ff53;
+  font-size: 1.5rem;
+}
+
+/* Card Content Styles */
+.card-content {
+  text-align: center;
+  transform: translateZ(0);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover .card-content {
+  transform: translateZ(30px);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.card-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #a8ff53;
+  transition: width 0.4s ease;
+}
+
+.service-card:hover .card-title::after {
+  width: 100%;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Tech Stack Styles */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.tech-badge {
+  background: rgba(59, 65, 61, 0.3);
+  border: 1px solid rgba(168, 255, 83, 0.1);
+  color: #ffffff;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateZ(10px);
+}
+
+.tech-badge:hover {
+  transform: translateZ(20px) scale(1.1);
+  background: rgba(168, 255, 83, 0.2);
+  box-shadow: 0 5px 15px rgba(168, 255, 83, 0.2);
+}
+
+/* CTA Section Styles */
+.cta-section {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.experience-text {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+}
+
+.highlight-text {
+  color: #a8ff53;
+  font-weight: 600;
+}
+
+.cta-button {
+  background: linear-gradient(90deg, #a8ff53 0%, #84cc41 100%);
+  color: #1a1a1f;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(168, 255, 83, 0.2);
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+/* Animations */
+@keyframes rotateLightBeam {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes floatDot {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-20px) translateX(10px); }
+}
+
+/* Floating Dots */
+.floating-dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.dot {
+  position: absolute;
+  background: rgba(168, 255, 83, 0.2);
+  border-radius: 50%;
+  animation: floatDot 6s infinite ease-in-out;
+}
+
+.dot-1 { top: 10%; left: 10%; width: 8px; height: 8px; animation-delay: 0s; }
+.dot-2 { top: 20%; right: 20%; width: 12px; height: 12px; animation-delay: -1s; }
+.dot-3 { bottom: 30%; left: 30%; width: 10px; height: 10px; animation-delay: -2s; }
+.dot-4 { bottom: 15%; right: 15%; width: 6px; height: 6px; animation-delay: -3s; }
+.dot-5 { top: 40%; left: 50%; width: 14px; height: 14px; animation-delay: -4s; }
+.dot-6 { bottom: 40%; right: 40%; width: 10px; height: 10px; animation-delay: -5s; }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .icon-container {
+    width: 50px;
+    height: 50px;
+  }
+
+  .service-icon {
+    font-size: 1.25rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-description {
+    font-size: 0.85rem;
+  }
+
+  .tech-badge {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .cta-button {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
