@@ -17,7 +17,7 @@ export default function Experience2() {
                   <span className="text-linear-4 d-flex align-items-center"> Experience </span>
                 </div>
                 <h3>
-                  +3.5
+                  4+ 
                   <span className="text-300">years of </span>
                   expertise
                   <span className="text-300">

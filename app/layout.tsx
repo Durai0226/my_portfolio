@@ -7,6 +7,7 @@ import "/public/assets/css/main.css"
 
 import type { Metadata } from "next"
 import { Urbanist, Playfair_Display, DM_Mono } from "next/font/google"
+import ThemeScript from "./theme-script"
 
 const urbanist = Urbanist({
 	weight: ['300', '400', '500', '600', '700'],
@@ -39,6 +40,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" data-bs-theme="dark">
+			<head>
+				<ThemeScript />
+			</head>
 			<body className={`${urbanist.variable} ${playfair_display.variable} ${dmMono.variable}`}>{children}</body>
 		</html>
 	)

@@ -103,8 +103,10 @@ Table of contents
   --tc-bg-dark-4: #1f1f24;
   --tc-bg-dark-5: #1f1f24;
   --tc-bg-dark-6: #2a2a31;
+  --tc-bg-dark-7: #1a1a1f;
   --tc-border-1: #c0dcbc;
   --tc-border-dark-1: #3b413d;
+  --tc-border-dark-2: #4a4a4a;
   --tc-linear-1: linear-gradient(90deg, #6d4df2 0%, #8c71ff 100%);
   --tc-linear-2: linear-gradient(-180deg, #6e4ef2 0%, transparent 100%);
   --tc-linear-3: linear-gradient(-180deg, #dfdfea 0%, rgba(223, 223, 234, 0.31) 31%, rgba(223, 223, 234, 0) 100%);
@@ -117,6 +119,8 @@ Table of contents
   --tc-linear-dark-5: linear-gradient(-90deg, rgba(255, 255, 255, 0.32) 0%, rgb(255, 255, 255) 100%);
   --tc-shadow-1: 0 13px 35px -12px rgba(35, 35, 35, 0.1);
   --tc-shadow-2: 0px 0px 25px 0px rgba(0, 0, 0, 0.08);
+  --tc-shadow-dark-1: 0 13px 35px -12px rgba(0, 0, 0, 0.3);
+  --tc-shadow-dark-2: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
   --tc-fw-black: 900;
   --tc-fw-extra-bold: 800;
   --tc-fw-bold: 700;

@@ -121,7 +121,7 @@ export default function Service2() {
             {/* Call-to-Action */}
             <div className="cta-section">
               <p className="experience-text">
-                Over <span className="highlight-text">3.5 years</span> of
+                Over <span className="highlight-text">4+  years</span> of
                 experience in creating{" "}
                 <span className="highlight-text">modern web applications</span>
               </p>
