@@ -39,35 +39,6 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" data-bs-theme="dark">
-			<head>
-				<script
-					dangerouslySetInnerHTML={{
-						__html: `
-							(function() {
-								try {
-									var theme = localStorage.getItem('theme') || 'dark';
-									document.documentElement.setAttribute('data-bs-theme', theme);
-									document.documentElement.setAttribute('data-theme', theme);
-									document.body.setAttribute('data-bs-theme', theme);
-									
-									// Apply fallback CSS class for production
-									if (theme === 'dark') {
-										document.body.classList.add('dark-theme-active');
-									} else {
-										document.body.classList.remove('dark-theme-active');
-									}
-								} catch (e) {
-									// Fallback to dark theme if localStorage fails
-									document.documentElement.setAttribute('data-bs-theme', 'dark');
-									document.documentElement.setAttribute('data-theme', 'dark');
-									document.body.setAttribute('data-bs-theme', 'dark');
-									document.body.classList.add('dark-theme-active');
-								}
-							})();
-						`,
-					}}
-				/>
-			</head>
 			<body className={`${urbanist.variable} ${playfair_display.variable} ${dmMono.variable}`}>{children}</body>
 		</html>
 	)
