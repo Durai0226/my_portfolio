@@ -11,6 +11,8 @@ export default function ThemeSwitch() {
 		const savedTheme = localStorage?.getItem("theme") || "dark"
 		setTheme(savedTheme)
 		document.documentElement.setAttribute("data-bs-theme", savedTheme)
+		document.documentElement.setAttribute("data-theme", savedTheme)
+		document.body.setAttribute("data-bs-theme", savedTheme)
 	}, [])
 
 	useEffect(() => {
@@ -18,6 +20,8 @@ export default function ThemeSwitch() {
 			// Update localStorage and HTML tag when theme changes
 			localStorage.setItem("theme", theme)
 			document.documentElement.setAttribute("data-bs-theme", theme)
+			document.documentElement.setAttribute("data-theme", theme)
+			document.body.setAttribute("data-bs-theme", theme)
 		}
 	}, [theme, mounted])
 

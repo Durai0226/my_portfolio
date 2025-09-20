@@ -47,7 +47,15 @@ export default function RootLayout({
 								try {
 									var theme = localStorage.getItem('theme') || 'dark';
 									document.documentElement.setAttribute('data-bs-theme', theme);
-								} catch (e) {}
+									document.documentElement.setAttribute('data-theme', theme);
+									// Also set it on body for additional compatibility
+									document.body.setAttribute('data-bs-theme', theme);
+								} catch (e) {
+									// Fallback to dark theme if localStorage fails
+									document.documentElement.setAttribute('data-bs-theme', 'dark');
+									document.documentElement.setAttribute('data-theme', 'dark');
+									document.body.setAttribute('data-bs-theme', 'dark');
+								}
 							})();
 						`,
 					}}
