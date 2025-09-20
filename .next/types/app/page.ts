@@ -1,4 +1,4 @@
-// File: /Users/dsp/Documents/my_portfolio/app/page.tsx
+// File: /Users/dsp/Downloads/my_portfolio 2/app/page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
