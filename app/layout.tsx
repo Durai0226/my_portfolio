@@ -39,6 +39,20 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" data-bs-theme="dark">
+			<head>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
+							(function() {
+								try {
+									var theme = localStorage.getItem('theme') || 'dark';
+									document.documentElement.setAttribute('data-bs-theme', theme);
+								} catch (e) {}
+							})();
+						`,
+					}}
+				/>
+			</head>
 			<body className={`${urbanist.variable} ${playfair_display.variable} ${dmMono.variable}`}>{children}</body>
 		</html>
 	)
