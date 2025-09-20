@@ -101,3 +101,16 @@ a {
 [data-bs-theme="dark"] html {
   color-scheme: dark;
 }
+
+/* Force dark theme styles for production */
+.dark-theme-active {
+  background-color: #1f1f24 !important;
+}
+
+.dark-theme-active.home-page-2 {
+  background-color: #1f1f24 !important;
+}
+
+.dark-theme-active.home-page-3 {
+  background-color: #1f1f24 !important;
+}

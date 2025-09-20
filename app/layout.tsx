@@ -48,13 +48,20 @@ export default function RootLayout({
 									var theme = localStorage.getItem('theme') || 'dark';
 									document.documentElement.setAttribute('data-bs-theme', theme);
 									document.documentElement.setAttribute('data-theme', theme);
-									// Also set it on body for additional compatibility
 									document.body.setAttribute('data-bs-theme', theme);
+									
+									// Apply fallback CSS class for production
+									if (theme === 'dark') {
+										document.body.classList.add('dark-theme-active');
+									} else {
+										document.body.classList.remove('dark-theme-active');
+									}
 								} catch (e) {
 									// Fallback to dark theme if localStorage fails
 									document.documentElement.setAttribute('data-bs-theme', 'dark');
 									document.documentElement.setAttribute('data-theme', 'dark');
 									document.body.setAttribute('data-bs-theme', 'dark');
+									document.body.classList.add('dark-theme-active');
 								}
 							})();
 						`,

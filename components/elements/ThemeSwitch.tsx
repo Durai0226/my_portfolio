@@ -10,20 +10,30 @@ export default function ThemeSwitch() {
 		// Access localStorage only on the client-side after mounting
 		const savedTheme = localStorage?.getItem("theme") || "dark"
 		setTheme(savedTheme)
-		document.documentElement.setAttribute("data-bs-theme", savedTheme)
-		document.documentElement.setAttribute("data-theme", savedTheme)
-		document.body.setAttribute("data-bs-theme", savedTheme)
+		applyTheme(savedTheme)
 	}, [])
 
 	useEffect(() => {
 		if (mounted) {
 			// Update localStorage and HTML tag when theme changes
 			localStorage.setItem("theme", theme)
-			document.documentElement.setAttribute("data-bs-theme", theme)
-			document.documentElement.setAttribute("data-theme", theme)
-			document.body.setAttribute("data-bs-theme", theme)
+			applyTheme(theme)
 		}
 	}, [theme, mounted])
+
+	const applyTheme = (themeValue: string) => {
+		// Apply Bootstrap theme attributes
+		document.documentElement.setAttribute("data-bs-theme", themeValue)
+		document.documentElement.setAttribute("data-theme", themeValue)
+		document.body.setAttribute("data-bs-theme", themeValue)
+		
+		// Apply fallback CSS class for production
+		if (themeValue === "dark") {
+			document.body.classList.add("dark-theme-active")
+		} else {
+			document.body.classList.remove("dark-theme-active")
+		}
+	}
 
 	const toggleTheme = () => {
 		setTheme(prevTheme => (prevTheme === "dark" ? "light" : "dark"))
