@@ -26,7 +26,7 @@ export default function Footer2() {
 							</div>
 							<div className="navigation d-flex align-items-center justify-content-center flex-wrap gap-4 my-4">
 								<a href="#about" className="fs-6"> About me </a>
-								<a href="#resume" className="fs-6"> Resume </a>
+								<a href="/assets/DuraiSingh__FE.pdf" download className="fs-6"> Resume </a>
 								<a href="#services" className="fs-6"> Services </a>
 								<a href="#portfolio" className="fs-6"> Portfolio </a>
 								<a href="#blog" className="fs-6"> Blog </a>

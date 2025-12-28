@@ -3887,7 +3887,7 @@ textarea.form-control {
 }
 
 .button-project .ellipse {
-  background-image: url(../imgs/projects/projects-1/elipse.png);
+  /* background-image: url(../imgs/projects/projects-1/elipse.png); */
 }
 
 .fillter-project {

@@ -133,7 +133,7 @@ export default function Skills2() {
                           <ul className="ps-3 d-flex flex-column justify-content-between h-100 position-relative">
                             <li className="mb-3">
                               <div className="d-flex flex-column flex-md-row gap-2">
-                                <p className="text-dark text-nowrap mb-0">Languages:</p>
+                                <p className="text-300 text-nowrap mb-0">Languages:</p>
                                 <span className="text-300">HTML, CSS, JavaScript, TypeScript</span>
                               </div>
                             </li>
@@ -157,7 +157,7 @@ export default function Skills2() {
                             </li>
                             <li className="mb-3">
                               <div className="d-flex flex-column flex-md-row gap-2">
-                                <p className="text-dark text-nowrap mb-0">Tools:</p>
+                                <p className="text-300 text-nowrap mb-0">Tools:</p>
                                 <span className="text-300">Docker, Linux, Git, Github actions, GSAP</span>
                               </div>
                             </li>

@@ -76,9 +76,9 @@ export default function Experience2() {
                   <div className="col-lg-8 ps-lg-5 mt-5 mt-lg-0">
                     <h6 className="text-linear-4">React Frontend Developer</h6>
                     <ul className="mt-4">
-                      <li className="text-dark mb-3">Developed and maintained multiple projects using <span className="highlight">React and Angular</span>, creating dynamic, responsive web applications.</li>
-                      <li className="text-dark mb-3">Led development of D2Defense platform using React, SASS, React Query, and Redux.</li>
-                      <li className="text-dark mb-3">Implemented remote desktop features and real-time activity monitoring dashboards.</li>
+                      <li className="mb-3">Developed and maintained multiple projects using <span className="highlight">React and Angular</span>, creating dynamic, responsive web applications.</li>
+                      <li className="mb-3">Led development of D2Defense platform using React, SASS, React Query, and Redux.</li>
+                      <li className="mb-3">Implemented remote desktop features and real-time activity monitoring dashboards.</li>
                     </ul>
                     <div className="d-flex flex-wrap align-items-center gap-3 mt-7">
                       <Link href="#" className="tech-tag">React</Link>

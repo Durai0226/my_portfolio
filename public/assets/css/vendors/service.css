@@ -4,6 +4,27 @@
   padding: 80px 0;
 }
 
+/* Theme Variables */
+:root {
+  --service-bg: #272730;
+  --service-border: #3b413d;
+  --service-text: #ffffff;
+  --service-text-secondary: rgba(255, 255, 255, 0.8);
+  --service-badge-bg: rgba(59, 65, 61, 0.3);
+  --service-badge-border: rgba(168, 255, 83, 0.1);
+  --service-shadow: rgba(0, 0, 0, 0.2);
+}
+
+[data-bs-theme="light"] {
+  --service-bg: #ffffff;
+  --service-border: #e5e7eb;
+  --service-text: #1f2937;
+  --service-text-secondary: rgba(31, 41, 55, 0.8);
+  --service-badge-bg: rgba(229, 231, 235, 0.5);
+  --service-badge-border: rgba(168, 255, 83, 0.2);
+  --service-shadow: rgba(0, 0, 0, 0.1);
+}
+
 /* Section Header Styles */
 .badge-wrapper {
   display: flex;
@@ -25,7 +46,7 @@
 .section-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--service-text);
   line-height: 1.3;
   margin-bottom: 1rem;
 }
@@ -35,15 +56,16 @@
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #ffffff 0%, #a8ff53 100%);
+  background: linear-gradient(90deg, var(--service-text) 0%, #a8ff53 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 /* Service Card Styles */
 .service-card {
-  background: #272730;
-  border: 1px solid #3b413d;
+  background: var(--service-bg);
+  border: 1px solid var(--service-border);
   backdrop-filter: blur(10px);
   border-radius: 16px;
   padding: 2rem;
@@ -62,7 +84,7 @@
   transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
   border-color: rgba(168, 255, 83, 0.3);
   box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.2),
+    0 20px 40px var(--service-shadow),
     0 0 20px rgba(168, 255, 83, 0.1);
 }
 
@@ -106,7 +128,7 @@
 .card-title {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--service-text);
   margin-bottom: 1rem;
   position: relative;
   display: inline-block;
@@ -129,7 +151,7 @@
 
 .card-description {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--service-text-secondary);
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
@@ -143,9 +165,9 @@
 }
 
 .tech-badge {
-  background: rgba(59, 65, 61, 0.3);
-  border: 1px solid rgba(168, 255, 83, 0.1);
-  color: #ffffff;
+  background: var(--service-badge-bg);
+  border: 1px solid var(--service-badge-border);
+  color: var(--service-text);
   padding: 0.4rem 1rem;
   border-radius: 50px;
   font-size: 0.8rem;
@@ -167,7 +189,7 @@
 
 .experience-text {
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--service-text-secondary);
   margin-bottom: 1.5rem;
 }
 
@@ -189,6 +211,10 @@
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
+}
+
+[data-bs-theme="light"] .cta-button {
+  color: #1a1a1f;
 }
 
 .cta-button:hover {

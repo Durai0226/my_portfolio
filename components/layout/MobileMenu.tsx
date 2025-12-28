@@ -1,17 +1,40 @@
 'use client'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import PerfectScrollbar from 'react-perfect-scrollbar'
 
 export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
+	const [theme, setTheme] = useState<string>("dark")
+
+	useEffect(() => {
+		const savedTheme = localStorage?.getItem("theme") || "dark"
+		setTheme(savedTheme)
+
+		const observer = new MutationObserver(() => {
+			const currentTheme = document.documentElement.getAttribute("data-bs-theme") || "dark"
+			setTheme(currentTheme)
+		})
+
+		observer.observe(document.documentElement, {
+			attributes: true,
+			attributeFilter: ["data-bs-theme"]
+		})
+
+		return () => observer.disconnect()
+	}, [])
 	return (
 		<>
 			<div className={`mobile-header-active mobile-header-wrapper-style perfect-scrollbar button-bg-2 ${isMobileMenu ? 'sidebar-visible' : ''}`}>
 				<div className="mobile-header-wrapper-inner">
 					<div className="mobile-header-logo">
 						<Link className="d-flex main-logo align-items-center d-inline-flex" href="/">
-							<img src="/assets/imgs/footer-1/logo.svg" alt="infinia" />
-							<span className="fs-4 ms-2 text-dark">william.design</span>
+									<img  
+										style={{
+											height:'70px',
+											filter: theme === 'light' ? 'invert(1) brightness(0)' : 'none'
+										}} 
+										src='assets/imgs/home-page-2/hero-1/dsp.png'
+									/>
 						</Link>
 						<div className={`burger-icon burger-icon-white border rounded-3 ${isMobileMenu ? 'burger-close' : ''}`} onClick={handleMobileMenu}>
 							<span className="burger-icon-top" />

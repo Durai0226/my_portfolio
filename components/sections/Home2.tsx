@@ -23,7 +23,7 @@ export default function Home2() {
 									<div className="p-lg-0 p-md-8 p-3">
 										<div className="text-secondary-2 d-flex align-items-center">
 											&lt;span&gt;
-											<div className="text-dark">
+											<div className="text-300">
 												<div className="typewriter">
 													<h1 className="fs-6 fw-medium">Hey, I’m Durai Singh</h1>
 												</div>
@@ -31,7 +31,7 @@ export default function Home2() {
 											&lt;/span&gt;
 										</div>
 										<h1 className="fs-50 my-3"> <span className="text-linear-4">{'{'}Frondend{'}'}</span> Developer<span className="flicker">_</span></h1>
-										<p className="mb-6 text-secondary-2">&lt;p&gt;<span className="text-dark">With expertise in cutting-edge technologies such as</span> <span className="text-secondary-2">Javascript</span>, <span className="text-secondary-2">React</span>, <span className="text-secondary-2">Angular</span>, and <span className="text-secondary-2">Next.js</span><span className="text-dark">... I deliver web solutions that are both innovative and robust.</span>&lt;/p&gt;</p>
+										<p className="mb-6 text-secondary-2">&lt;p&gt;<span className="text-300">With expertise in cutting-edge technologies such as</span> <span className="text-secondary-2">Javascript</span>, <span className="text-secondary-2">React</span>, <span className="text-secondary-2">Angular</span>, and <span className="text-secondary-2">Next.js</span><span className="text-300">... I deliver web solutions that are both innovative and robust.</span>&lt;/p&gt;</p>
 										<div className="row">
 											<div className="col-7">
 												{/* Carausel Scroll */}
