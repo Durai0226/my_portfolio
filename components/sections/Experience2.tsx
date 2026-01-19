@@ -12,7 +12,7 @@ export default function Experience2() {
               <div className="p-lg-8 p-md-6 p-3 position-relative z-1">
                 <div className="d-flex align-items-center">
                   <svg className="text-primary-2 me-2" xmlns="http://www.w3.org/2000/svg" width={5} height={6} viewBox="0 0 5 6" fill="none">
-                    <circle cx="2.5" cy={3} r="2.5" fill="#A8FF53" />
+                    <circle cx="2.5" cy={3} r="2.5" fill="currentColor" />
                   </svg>
                   <span className="text-linear-4 d-flex align-items-center"> Experience </span>
                 </div>
@@ -123,7 +123,7 @@ export default function Experience2() {
         .company-logo {
           width: 50px;
           height: 50px;
-          background: linear-gradient(45deg, #A8FF53, #00C6FF);
+          background: linear-gradient(45deg, var(--accent-primary, #64748b), #94a3b8);
           border-radius: 8px;
           display: flex;
           align-items: center;
@@ -131,6 +131,7 @@ export default function Experience2() {
           color: white;
           font-weight: bold;
           font-size: 1.2rem;
+          box-shadow: 0 4px 15px rgba(100, 116, 139, 0.2);
         }
 
         .hover-effect {
@@ -143,13 +144,13 @@ export default function Experience2() {
         }
 
         .highlight {
-          color: #A8FF53;
+          color: var(--accent-primary, #64748b);
           font-weight: 600;
         }
 
         .tech-tag {
-          background: linear-gradient(45deg, rgba(168,255,83,0.1), rgba(0,198,255,0.1));
-          border: 1px solid rgba(168,255,83,0.3);
+          background: linear-gradient(45deg, rgba(100,116,139,0.08), rgba(148,163,184,0.08));
+          border: 1px solid rgba(100,116,139,0.2);
           padding: 8px 16px;
           border-radius: 20px;
           color: #333;
@@ -158,8 +159,28 @@ export default function Experience2() {
         }
 
         .tech-tag:hover {
-          background: linear-gradient(45deg, rgba(168,255,83,0.2), rgba(0,198,255,0.2));
+          background: linear-gradient(45deg, rgba(100,116,139,0.15), rgba(148,163,184,0.15));
+          border-color: rgba(100,116,139,0.3);
           transform: translateY(-1px);
+          box-shadow: 0 4px 12px rgba(100,116,139,0.15);
+        }
+
+        [data-bs-theme="dark"] .company-logo {
+          background: linear-gradient(45deg, #A8FF53, #00C6FF);
+        }
+
+        [data-bs-theme="dark"] .highlight {
+          color: #A8FF53;
+        }
+
+        [data-bs-theme="dark"] .tech-tag {
+          background: linear-gradient(45deg, rgba(168,255,83,0.1), rgba(0,198,255,0.1));
+          border: 1px solid rgba(168,255,83,0.3);
+        }
+
+        [data-bs-theme="dark"] .tech-tag:hover {
+          background: linear-gradient(45deg, rgba(168,255,83,0.2), rgba(0,198,255,0.2));
+          box-shadow: 0 5px 15px rgba(168,255,83,0.2);
         }
 
         .background-image {

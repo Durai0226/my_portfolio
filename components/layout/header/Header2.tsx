@@ -14,7 +14,7 @@ export default function Header2({ scroll, isMobileMenu, handleMobileMenu,isOffCa
 								<i className="ri-menu-2-line" />
 							</a>
 							<div className="container  px-4">
-								<Link className="navbar-brand d-flex main-logo align-items-center" href="/index-2">
+								<Link className="navbar-brand d-flex main-logo align-items-center" href="/">
 									{/* <img src="assets/imgs/home-page-2/template/favicon.svg" alt="zelio" /> */}
 									<img  style={{height:'70px'}} src='assets/imgs/home-page-2/hero-1/dsp.png'></img>
 								</Link>

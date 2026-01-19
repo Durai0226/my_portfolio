@@ -34,6 +34,8 @@ Table of contents
   --urbanist: 'Urbanist',sans-serif;
   --playpair: 'Playfair Display', serif;
   --dmMono: 'DM Mono', monospace;
+  --accent-primary: #64748b;
+  --accent-secondary: #475569;
   --tc-body-font-size: 16px;
   --tc-fs-1: 40px;
   --tc-fs-2: 33px;
@@ -49,7 +51,7 @@ Table of contents
   --tc-body-line-height: 1.5;
   --tc-heading-line-height: 1.2;
   --tc-theme-primary-1: #6e4ef2;
-  --tc-theme-primary-2: #62a92b;
+  --tc-theme-primary-2: #64748b;
   --tc-theme-primary-3: #be6895;
   --tc-theme-secondary-1: #21212d;
   --tc-theme-secondary-3: #b2a4ab;
@@ -110,7 +112,7 @@ Table of contents
   --tc-linear-1: linear-gradient(90deg, #6d4df2 0%, #8c71ff 100%);
   --tc-linear-2: linear-gradient(-180deg, #6e4ef2 0%, transparent 100%);
   --tc-linear-3: linear-gradient(-180deg, #dfdfea 0%, rgba(223, 223, 234, 0.31) 31%, rgba(223, 223, 234, 0) 100%);
-  --tc-linear-4: linear-gradient(-90deg, #33a381 0%, #129840 100%);
+  --tc-linear-4: linear-gradient(-90deg, #64748b 0%, #475569 100%);
   --tc-linear-5: linear-gradient(-90deg, rgba(31, 31, 36, 0.45) 0%, rgb(31, 31, 36) 100%);
   --tc-linear-dark-1: linear-gradient(90deg, #6d4df2 0%, #8c71ff 100%);
   --tc-linear-dark-2: linear-gradient(-180deg, #6e4ef2 0%, transparent 100%);
@@ -128,6 +130,13 @@ Table of contents
   --tc-fw-medium: 500;
   --tc-fw-regular: 400;
   --tc-fw-light: 300;
+}
+
+[data-bs-theme="dark"] {
+  --tc-theme-primary-2: #a8ff53;
+  --tc-linear-4: linear-gradient(-90deg, #659932 0%, #a8ff53 100%);
+  --accent-primary: #a8ff53;
+  --accent-secondary: #84cc41;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -2843,6 +2852,58 @@ textarea {
 }
 .offCanvas__info.style-2 .offCanvas__close-icon button {
   color: var(--tc-theme-primary-2);
+}
+
+/* Light theme styling for OffCanvas */
+[data-bs-theme="light"] .offCanvas__info {
+  background: #ffffff;
+  border-right: 1px solid rgba(100, 116, 139, 0.15);
+  box-shadow: 4px 0 20px rgba(15, 23, 42, 0.1);
+}
+
+[data-bs-theme="light"] .offCanvas__close-icon button {
+  color: #64748b;
+}
+
+[data-bs-theme="light"] .offCanvas__close-icon button:hover {
+  color: #475569;
+  background: rgba(100, 116, 139, 0.1);
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[data-bs-theme="light"] .offCanvas__side-info {
+  border-top: 1px solid rgba(100, 116, 139, 0.15);
+}
+
+[data-bs-theme="light"] .offCanvas__logo h3 {
+  color: #0f172a;
+}
+
+[data-bs-theme="light"] .offCanvas__side-info .contact-list p {
+  color: #475569;
+}
+
+[data-bs-theme="light"] .offCanvas__side-info .contact-list .text-400 {
+  color: #64748b !important;
+}
+
+[data-bs-theme="light"] .offCanvas__side-info .contact-list .text-200 {
+  color: #64748b !important;
+}
+
+[data-bs-theme="light"] .offCanvas__side-info a {
+  color: #64748b;
+  transition: all 0.2s ease;
+}
+
+[data-bs-theme="light"] .offCanvas__side-info a:hover {
+  color: #475569;
+  transform: translateY(-1px);
 }
 .offCanvas__close-icon {
   margin-top: -16px;

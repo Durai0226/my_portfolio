@@ -8,7 +8,7 @@ export default function OffCanvas({ isOffCanvas, handleOffCanvas }: any) {
 					<div className="offCanvas__close-icon menu-close" onClick={handleOffCanvas}>
 						<button><i className="ri-close-line" /></button>
 					</div>
-					<div className="offCanvas__logo mb-5">
+					<div className="offCanvas__logo mb-4">
 						<h3 className="mb-0">Get in touch</h3>
 					</div>
 					<div className="offCanvas__side-info mb-30">

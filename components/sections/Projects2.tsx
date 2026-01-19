@@ -132,7 +132,7 @@ export default function Projects2() {
             <div className="p-lg-8 p-md-6 p-3 position-relative z-1">
               <div className="d-flex align-items-center">
                 <svg className="text-primary-2 me-2" xmlns="http://www.w3.org/2000/svg" width={5} height={6} viewBox="0 0 5 6" fill="none">
-                  <circle cx="2.5" cy={3} r="2.5" fill="#A8FF53" />
+                  <circle cx="2.5" cy={3} r="2.5" fill="currentColor" />
                 </svg>
                 <span className="text-linear-4 d-flex align-items-center"> Experience </span>
               </div>
@@ -201,7 +201,7 @@ export default function Projects2() {
                   </div>
                   <div className="swiper-button-next end-0 shadow position-relative">
                     <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none">
-                      <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" fill="#A8FF53" />
+                      <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" fill="currentColor" />
                     </svg>
                   </div>
                 </div>

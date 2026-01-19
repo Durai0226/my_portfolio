@@ -14,7 +14,7 @@ export default function Skills2() {
 								<div className="text-center">
 									<div className="d-flex align-items-center justify-content-center">
 										<svg className="text-primary-2 me-2" xmlns="http://www.w3.org/2000/svg" width={5} height={6} viewBox="0 0 5 6" fill="none">
-											<circle cx="2.5" cy={3} r="2.5" fill="#A8FF53" />
+											<circle cx="2.5" cy={3} r="2.5" fill="currentColor" />
 										</svg>
 										<span className="text-linear-4 d-flex align-items-center"> Projects </span>
 									</div>
