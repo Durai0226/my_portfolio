@@ -1,49 +1,40 @@
-import "/public/assets/css/vendors/bootstrap.min.css"
-import "/public/assets/css/vendors/swiper-bundle.min.css"
-import "/public/assets/css/vendors/carouselTicker.css"
-import "/public/assets/css/vendors/magnific-popup.css"
-import "/public/assets/fonts/remixicon/remixicon.css"
-import "/public/assets/css/main.css"
+import './editorial.css'
+import type { Metadata, Viewport } from 'next'
+import { Archivo, Instrument_Serif, JetBrains_Mono } from 'next/font/google'
+import ThemeScript from './theme-script'
 
-import type { Metadata } from "next"
-import { Urbanist, Playfair_Display, DM_Mono } from "next/font/google"
-import ThemeScript from "./theme-script"
-
-const urbanist = Urbanist({
-	weight: ['300', '400', '500', '600', '700'],
-	subsets: ['latin'],
-	variable: "--urbanist",
-	display: 'swap',
-})
-const playfair_display = Playfair_Display({
-	weight: ['400', '500', '600', '700'],
-	subsets: ['latin'],
-	variable: "--playpair",
-	display: 'swap',
-})
-const dmMono = DM_Mono({
-	weight: ['300', '400', '500'],
-	subsets: ['latin'],
-	variable: "--dmMono",
-	display: 'swap',
-})
+const archivo = Archivo({ subsets: ['latin'], axes: ['wdth'], variable: '--font-archivo', display: 'swap' })
+/* next/font has no fallback metrics for Instrument Serif, so it falls back to Georgia without a size adjustment */
+const serif = Instrument_Serif({ subsets: ['latin'], weight: '400', style: ['normal', 'italic'], variable: '--font-serif', display: 'swap', adjustFontFallback: false, fallback: ['Georgia', 'serif'] })
+const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jbm', display: 'swap' })
 
 export const metadata: Metadata = {
-	title: "Duraisingh - Personal Portfolio ",
-	description: "Duraisingh - Personal Portfolio",
+	title: 'Durai Singh — Frontend Developer',
+	description: 'Durai Singh is a frontend developer in India building clear, fast interfaces for security, CRM and Web3 products with React, Next.js and Angular.',
+	openGraph: {
+		title: 'Durai Singh — Frontend Developer',
+		description: 'Clear, fast interfaces for security, CRM and Web3 products. Five years, seven products, one Accu Star Award.',
+		type: 'website',
+	},
 }
 
-export default function RootLayout({
-	children,
-}: Readonly<{
-	children: React.ReactNode
-}>) {
+export const viewport: Viewport = {
+	width: 'device-width',
+	initialScale: 1,
+	viewportFit: 'cover',
+	themeColor: [
+		{ media: '(prefers-color-scheme: dark)', color: '#14160e' },
+		{ media: '(prefers-color-scheme: light)', color: '#f0eee6' },
+	],
+}
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
 	return (
-		<html lang="en" data-bs-theme="dark">
+		<html lang="en" className={`${archivo.variable} ${serif.variable} ${mono.variable}`} suppressHydrationWarning>
 			<head>
 				<ThemeScript />
 			</head>
-			<body className={`${urbanist.variable} ${playfair_display.variable} ${dmMono.variable}`}>{children}</body>
+			<body>{children}</body>
 		</html>
 	)
 }

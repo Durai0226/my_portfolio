@@ -1,21 +1,5 @@
+/** Runs before first paint: applies the visitor's saved theme (dark-first; the cover is lime in dark, paper in light). */
 export default function ThemeScript() {
-  const codeToRunOnClient = `
-    (function() {
-      try {
-        const savedTheme = localStorage.getItem('theme') || 'dark';
-        document.documentElement.setAttribute('data-bs-theme', savedTheme);
-      } catch (e) {
-        // Fallback to dark theme if localStorage is not available
-        document.documentElement.setAttribute('data-bs-theme', 'dark');
-      }
-    })();
-  `;
-
-  return (
-    <script
-      dangerouslySetInnerHTML={{
-        __html: codeToRunOnClient,
-      }}
-    />
-  );
+	const code = `(function(){try{var r=document.documentElement,t=localStorage.getItem('ds-theme');if(!t){var o=localStorage.getItem('theme');if(o==='light'||o==='dark')t=o}if(t==='light'||t==='dark')r.dataset.theme=t}catch(e){}})();`
+	return <script dangerouslySetInnerHTML={{ __html: code }} />
 }
